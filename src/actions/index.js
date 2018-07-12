@@ -733,7 +733,7 @@ export const focusItem = ( index, mouseEvent ) => {
 		if( options[ index ] || ( index === -1 && state.settings.placeHolderInside ) ) {
 			dispatch( {
 				type: FOCUS_ITEM,
-				item: index !== -1 ? options[ index ] : { key: 'default' },
+				item: index !== -1 ? options[ index ].toString() : { key: 'default' },
 				index,
 				mouseEvent
 			} )
